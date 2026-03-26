@@ -1,0 +1,36 @@
+{
+  "name": "rag-pdf-chat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ptl-sneh/rag-pdf-chat.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Ptl-sneh/rag-pdf-chat/issues"
+  },
+  "homepage": "https://github.com/Ptl-sneh/rag-pdf-chat#readme",
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.2"
+  },
+  "dependencies": {
+    "@langchain/community": "^1.1.25",
+    "@langchain/core": "^1.1.36",
+    "@langchain/groq": "^1.1.5",
+    "@langchain/ollama": "^1.2.6",
+    "dotenv": "^17.3.1",
+    "faiss-node": "^0.5.1",
+    "langchain": "^1.2.37",
+    "pdf-parse": "^2.4.5"
+  }
+}
