@@ -33,5 +33,15 @@ export const ingestPdf = async (pdfPath: string): Promise<FaissStore> => {
 
     loggerInfo(`Split into ${chunks.length} chunks`)
 
+    loggerInfo("Generating Embeddings via ollama")
 
+    const embeddings = new OllamaEmbeddings({
+        model : "nomic-embed-text" // model to convert text --> vectors
+    })
+
+    const vectorStore = await FaissStore.fromDocuments(chunks, embeddings) // creates a vector store from the chunks and embeddings
+
+    loggerInfo("Embeddings Generated and stored in Vector Store")
+
+    return vectorStore
 }
