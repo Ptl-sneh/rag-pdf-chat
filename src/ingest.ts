@@ -41,7 +41,7 @@ export const ingestPdf = async (pdfPath: string): Promise<FaissStore> => {
 
     const vectorStore = await FaissStore.fromDocuments(chunks, embeddings) // creates a vector store from the chunks and embeddings
 
-    loggerInfo("Embeddings Generated and stored in Vector Store")
+    loggerInfo(`Vector Store created with ${vectorStore.index.ntotal} vectors`)
 
     return vectorStore
 }
